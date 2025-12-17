@@ -1,25 +1,11 @@
-import "./App.css";
-import ManagementDashboard from "./Components/ManagementDashboard";
-
-export default function App() {
-  return (
-    <ManagementDashboard />
-  );
-}
+import Header from "./Header";
+import Tabs from "./Tabs";
+import Statistics from "../pages/Statistics";
+import FlatBoard from "../pages/FlatBoard";
+import { useState } from "react";
 
 
-
-
-
-
-
-
-
-
-
-
-{
-  /*export default function App() {
+export default function ManagementDashboard() {
   const [showtab, setshowtab] = useState(1);
   const handletab = (e) => {
     setshowtab(e);
@@ -69,38 +55,99 @@ export default function App() {
       </div>
     </div>
   );
-} */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {
   /*
-  import { Routes, Route } from "react-router-dom";
-
-import ManagementDashboard from "../../dashboard-fixed/src/Components/ManagementDashboard";
-
-import "./App.css";
-import LoginForm from "../../dashboard-fixed/src/Components/LoginForm";
-import { Form } from "react-router-dom";
-import FlatBoardPage from "../../dashboard-fixed/src/Components/FlatBoardPage";
-import AddTower from "./Components/AddTower";
-import AdminPage from "./Components/AdminPage";
-export default function App() {
-  return (
-    <>
-      <AdminPage />
-      
-        <AddTower />
-        <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/management" element={<ManagementDashboard />} />
-        <Route path="/flatboard" element={<FlatBoardPage />} />
-      </Routes> 
-    </>
-  );
+  export default function ManagementDashboard() {
+    const [activeTab, setActiveTab] = useState("statistics");
+    const [flats, setFlats] = useState([]);
+  
+    const changeTab = (tabName) => {
+      setActiveTab(tabName);
+    };
+  
+   
+    return (
+      <div>
+        <Header />
+        <Tabs changeTab={changeTab} activeTab={activeTab} />
+  
+        <div style={{ padding: 16 }}>
+          {activeTab === "statistics" && <Statistics flats={flats} />}
+  
+          {activeTab === "flatboard" && <FlatBoard />}
+        </div>
+      </div>
+    );
+  }
+  */
 }
 
 
-*/
+{
+  /*// ✅ FETCH LIVE FLATS FROM BACKEND
+  useEffect(() => {
+    const fetchFlats = () => {
+      fetch("http://localhost:5000/api/flats")
+        .then((res) => res.json())
+        .then((data) => setFlats(data))
+        .catch((err) => console.error("Fetch flats error:", err));
+    };
+
+    fetchFlats(); // initial load
+    const interval = setInterval(fetchFlats, 2000); // auto refresh
+
+    return () => clearInterval(interval);
+  }, []);*/
 }

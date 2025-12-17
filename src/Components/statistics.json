@@ -1,0 +1,83 @@
+{
+  "summaryCards": [
+    {
+      "title": "Total Flats",
+      "value": 1600,
+      "icon": "bi-house fs-3",
+      "subtitle": "Total Units"
+    },
+    {
+      "title": "Available",
+      "value": 545,
+      "icon": "bi-check-square fs-3",
+      "subtitle": "34.1% of Total"
+    },
+    {
+      "title": "Sold",
+      "value": 580,
+      "icon": "bi-bag fs-3",
+      "subtitle": "36.3% of Total"
+    },
+    {
+      "title": "Blocked",
+      "value": 475,
+      "icon": "bi-exclamation-circle fs-3",
+      "subtitle": "29.7% of Total"
+    }
+  ],
+
+  "squareFootage": {
+    "total": "3,900,000 sq.ft",
+    "available": "1,330,000",
+    "sold": "1,422,800",
+    "blocked": "1,147,200"
+  },
+
+  "facingBreakdown": [
+    {
+      "facing": "North",
+      "totalFlats": 190,
+      "available": 68,
+      "sold": 72,
+      "blocked": 50
+    },
+    {
+      "facing": "East",
+      "totalFlats": 233,
+      "available": 82,
+      "sold": 87,
+      "blocked": 63
+    },
+    {
+      "facing": "North-East",
+      "totalFlats": 190,
+      "available": 79,
+      "sold": 78,
+      "blocked": 77
+    }
+  ],
+
+  "towerBreakdown": [
+    {
+      "tower": "Tower A",
+      "total": 400,
+      "available": 131,
+      "sold": 163,
+      "blocked": 106
+    },
+    {
+      "tower": "Tower B",
+      "total": 400,
+      "available": 141,
+      "sold": 137,
+      "blocked": 122
+    },
+    {
+      "tower": "Tower C",
+      "total": 400,
+      "available": 143,
+      "sold": 131,
+      "blocked": 137
+    }
+  ]
+}
