@@ -1,5 +1,4 @@
 export default function Table({ name, theadData, tbodyData }) {
-  
   return (
     <div className="card mt-4">
       <div className="card-body p-0">

@@ -6,7 +6,7 @@ export default function AddTower() {
 
   const handleCancel = (e) => {
     setCancel(e);
- }
+  };
   useEffect(() => {
     const newcolumn = [];
     for (let i = 0; i < 4; i++) {
@@ -77,10 +77,14 @@ export default function AddTower() {
         </h5>
 
         <input
-          class="form-control mb-3"
+          class="form-control mb-3 towername"
           placeholder="Enter tower name (e.g., Tower E)"
         />
-        <input class="form-control mb-3" type="number" defaultValue={100} />
+        <input
+          class="form-control mb-3 no.oftowers"
+          type="number"
+          defaultValue={100}
+        />
 
         <h5>Column Configuration (BHK Types)</h5>
 
@@ -110,7 +114,7 @@ export default function AddTower() {
           <button
             type="button"
             class="btn btn-secondary btn-lg "
-            onClick={()=>handleCancel(true)}
+            onClick={() => handleCancel(true)}
             style={{
               marginRight: "20px",
               paddingLeft: "120px",

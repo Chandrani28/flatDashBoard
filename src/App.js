@@ -1,9 +1,16 @@
 import "./App.css";
+import { useState } from 'react';
 import ManagementDashboard from "./Components/ManagementDashboard";
-
+import TowerForm from "./Components/TowerForm";
 export default function App() {
+  const [towerOpen, setTowerOpen] = useState(false);
   return (
-    <ManagementDashboard />
+    <>
+      {/*<ManagementDashboard /> */}
+      <button type='button' onClick={() => setTowerOpen(true)}>+ Add Tower</button>
+      {towerOpen && <TowerForm/> }
+    </>
+    
   );
 }
 
