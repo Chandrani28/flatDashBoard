@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import data from "./towersdata.json";
+import Table from "./Table";
 
 export default function AdminPage() {
   return (
@@ -83,11 +85,29 @@ export default function AdminPage() {
           </div>
         </div>
       </nav>
-      <div class="container-fluid">
+
+      <div class="card-group">
         <div class="card">
-          <h5 class="card-header">Tower A</h5>
-          <div class="card-body">
-            
+          <div class="card-body ">
+            <h5 class="card-title text-center">{data.name}</h5>
+            <div className="d-flex gap-2 mb-3">
+              {data.columns.map((eachColumn, index) => (
+                <div>
+                  {eachColumn.type}
+                  <br />
+                  <small>{eachColumn.area}</small>
+                </div>
+              ))}
+            </div>
+            <div className="d-flex gap-2 ">
+              {data.columns.map((eachColumn, index) => (
+                <div key={index} className="d-flex flex-column">
+                  {eachColumn.flats.map((eachFlat, index) => (
+                    <button>{eachFlat.flatNo}</button>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

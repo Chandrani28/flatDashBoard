@@ -1,80 +1,11 @@
-.form-container {
+.wrapper {
     height: 100vh;
-    width: 100%;
-    background: url("./background-house.png") no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.form-card {
-    width: 400px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 14px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.login {
+    width: 350px;
+    padding: 20px;
+    height: min-content;
+    border: solid;
+    border-radius: 5px;
 }
-
-.icon {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-.form-group {
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px !important;
-    border: 1px solid #ccc;
-    outline: none;
-
-}
-
-.form-group .form-control:focus {
-    border-color: #ec7459 !important;
-    box-shadow: none !important;
-    border: 2px solid #ec7459 !important;
-}
-
-.login-btn {
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(to right, #e6684b, #f8a28f);
-    border: none;
-    color: black;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    box-shadow: 0 4px 12px #ec7459
-}
-
-.login-btn:hover {
-    opacity: 0.9;
-}
-
-.back-link {
-    font-size: 13px;
-    margin-top: 15px;
-    cursor: pointer;
-    
-}
-

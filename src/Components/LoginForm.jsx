@@ -1,144 +1,91 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-  import "./login.css";
-import { useRef, useState } from "react";
-import { useNavigate, Link} from "react-router-dom";
- 
-
+import { useState } from "react";
+import "./Login.css";
+import ManagementDashboard from "./ManagementDashboard";
+import AdminPage from "./AdminPage";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
 
-  const navigate = useNavigate();
-  const nameRef = useRef(null);
-  const passRef = useRef(null);
   const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
-  const validateForm = (e) => {
-    e.preventDefault();
-    let userName = nameRef.current.value;
-    let password = passRef.current.value;
-    //Error Message if inputs are invalid -> we should maintain states
-    if (userName.trim() === "" || password.trim() === "") {
-      setError("Please enter both username and password");
-      return;
-    }
-    setError("");
-
-    if (userName === "admin" && password === "admin123") {
-      navigate("/admin");
-    } else if (userName === "management" && password === "management123") {
-      navigate("/management");
-    }
-    else {
-      setError("Invalid username or password");
-    }
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // To Validate username and password
+    if (!formData.username || !formData.password) {
+      setError("Please enter both username and password.");
+      return;
+    } else if (
+      formData.username === "admin" &&
+      formData.password === "admin123"
+    ) {
+      navigate("/admin");
+
+      return;
+    } else if (
+      formData.username === "management" &&
+      formData.password === "management123"
+    ) {
+      navigate("/management");
+      return;
+    } else {
+      setError("Invalid username and password");
+      return;
+    }
+  };
   return (
-    <div className="form-container">
-      <form onSubmit={validateForm}>
-        <div className="form-card">
-          <i
-            className="bi bi-house-door fs-1"
-            style={{ color: "#ee5e32ff" }}
-          ></i>
-          <h2>Login</h2>
-          <p className="subtitle">Flat Updates Management System</p>
-          
-          {error && (
-            <div className="alert alert-danger text-center" role="alert">
-              {error}
-            </div>
-          )}
-
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input
-              className="form-control"
-              type="text"
-              id="username"
-              placeholder="Enter username"
-              ref={nameRef}
-            />
-          </div>
-          <div className="form-group ">
-            <label htmlFor="password">Password</label>
-            <div className="form-item">
+    <div className="wrapper d-flex align-items-center justify-content-center w-100">
+      <div className="login">
+        <i class="bi bi-house-door fs-3"></i>
+        <h2 className="mb-3">Login Form</h2>
+        <p>Flat Updates Management System</p>
+        <div className="form-container">
+          <form onSubmit={handleSubmit}>
+            {error && <p>{error}</p>}
+            <div className="form-group mb-2">
+              <label htmlFor="username" className="form-label">
+                Username
+              </label>
               <input
+                type="text"
+                placeholder="Enter username"
                 className="form-control"
-                type={showPassword ? "text" : "password"}
-                id="password"
-                placeholder="Enter password"
-                ref={passRef}
-              />
-              
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+              ></input>
             </div>
-          </div>
+            <div className="form-group mb-2">
+              <label htmlFor="password" className="form-label">
+                Password
+              </label>
+              <input
+                type="password"
+                placeholder="Enter password"
+                className="form-control"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+              ></input>
+            </div>
+            <button type="submit" className="btn btn-success w-100 mt-2 mb-2">
+              Login
+            </button>
 
-          <button className="login-btn" type="submit">
-            Login
-          </button>
-          <div>
-            <Link
-              to={"/flatboard"}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <p className="back-link">&larr; Back to Flat Board</p>
-            </Link>
-          </div>
+            <a href="#" style={{ color: "black", textDecoration: "none" }}>
+              &larr; Back to flatboard
+            </a>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
-*/

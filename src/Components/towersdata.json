@@ -1,0 +1,31 @@
+{
+  "name": "Tower A",
+  "columns": [
+    {
+      "type": "2 BHK",
+      "area": "1200 sq.ft",
+      "flats": [
+        { "flatNo": "A-101" },
+        { "flatNo": "A-102" },
+        { "flatNo": "A-103" }
+      ]
+    },
+    {
+      "type": "3 BHK",
+      "area": "1500 sq.ft",
+      "flats": [
+        { "flatNo": "A-201" },
+        { "flatNo": "A-202" },
+        { "flatNo": "A-203" }
+      ]
+    },
+    {
+      "type": "4 BHK",
+      "area": "2000 sq.ft",
+      "flats": [
+        { "flatNo": "A-301" },
+        { "flatNo": "A-302" }
+      ]
+    }
+  ]
+}

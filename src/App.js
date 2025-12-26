@@ -1,29 +1,38 @@
 import "./App.css";
-import { useState } from 'react';
+import { useState } from "react";
 import ManagementDashboard from "./Components/ManagementDashboard";
 import TowerForm from "./Components/TowerForm";
-export default function App() {
+import AdminPage from "./Components/AdminPage";
+import LoginForm from "./Components/LoginForm";
+import { Route, Routes } from "react-router-dom";
+
+export default function App({ link }, element) {
   const [towerOpen, setTowerOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setTowerOpen(false);
+  };
   return (
-    <>
-      {/*<ManagementDashboard /> */}
-      <button type='button' onClick={() => setTowerOpen(true)}>+ Add Tower</button>
-      {towerOpen && <TowerForm/> }
-    </>
-    
+    <Routes>
+      <Route path="/" element={<LoginForm />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/management" element={<ManagementDashboard />} />
+      <Route path="/admin" element={<AdminPage />} />
+    </Routes>
   );
 }
 
 
-
-
-
-
-
-
-
-
-
+{
+  /*<AdminPage />
+  <ManagementDashboard />
+  <button type="button" class="btn btn-dark m-3" onClick={() => setTowerOpen(true)}>
+    + Add Tower
+  </button>
+  {towerOpen && (
+    <TowerForm onSubmit={handleButtonClick} onCancel={handleButtonClick} />
+  )}*/
+}
 
 {
   /*export default function App() {

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-export default function TowerForm() {
+export default function TowerForm({ onSubmit, onCancel }) {
   const [column, setColumn] = useState([]); // for BHK types
   const [formData, setFormData] = useState({}); // store each form data
-  
+
   //values for dropdown
   const options = [
     { id: "1", label: "type1", value: "2BHK" },
@@ -10,14 +10,12 @@ export default function TowerForm() {
     { id: "3", label: "type3", value: "4BHK" },
     { id: "4", label: "type4", value: "5BHK" },
   ];
+
+  // for storing data in JSON format
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     console.log(formData);
-  };
-
-  const handleCancel = (e) => {
-    //setCancel(e);
   };
 
   const handleSubmit = (e) => {
@@ -89,9 +87,9 @@ export default function TowerForm() {
     setColumn(newcolumn);
   };
   return (
-      <div>
-          <button t>+Add tower</button>
-      <div class="card w-75 mb-3 mt-6">
+    <div>
+      
+      <div class="card w-75 m-3 mt-6">
         <div class="card-body">
           <form onSubmit={handleSubmit}>
             <input
@@ -133,7 +131,7 @@ export default function TowerForm() {
               <button
                 type="button"
                 class="btn btn-secondary btn-lg "
-                onClick={() => handleCancel(true)}
+                onClick={() => onCancel()}
                 style={{
                   marginRight: "20px",
                   paddingLeft: "120px",
