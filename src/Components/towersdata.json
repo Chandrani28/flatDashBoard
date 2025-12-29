@@ -1,31 +1,528 @@
 {
-  "name": "Tower A",
-  "columns": [
+  "towerData":[
     {
-      "type": "2 BHK",
-      "area": "1200 sq.ft",
-      "flats": [
-        { "flatNo": "A-101" },
-        { "flatNo": "A-102" },
-        { "flatNo": "A-103" }
+      "name": "Tower A",
+      "columns": [
+        {
+          "type": "2 BHK",
+          "area": "1200 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 101,
+              "tower": "Tower A",
+              "type": "4 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 1,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 201,
+              "tower": "Tower A",
+              "type": "4 BHK",
+              "status": "AVAILABLE",
+              "facing": "West",
+              "floor": 2,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 301,
+              "tower": "Tower A",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "South-West",
+              "floor": 3,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9610706547, customer47@email.com"
+            },
+            {
+              "flatNumber": 401,
+              "tower": "Tower A",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 4,
+              "area": "2800 sq.ft",
+              "customerInfo": "Vikram Reddy, +91 9017819984, customer31@email.com"
+            },
+            {
+              "flatNumber": 501,
+              "tower": "Tower A",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 5,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9418729638, customer77@email.com"
+            }
+          ]
+        },
+        {
+          "type": "3 BHK",
+          "area": "1500 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 102,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 14,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 202,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "BLOCKED",
+              "facing": "West",
+              "floor": 15,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 302,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "East",
+              "floor": 16,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9959824864, customer39@email.com"
+            },
+            {
+              "flatNumber": 402,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North",
+              "floor": 17,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 502,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "South-East",
+              "floor": 21,
+              "area": "2800 sq.ft",
+              "customerInfo": "Rajesh Kumar, +91 9553653510, customer97@email.com"
+            }
+          ]
+        },
+        {
+          "type": "4 BHK",
+          "area": "2000 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 103,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "East",
+              "floor": 47,
+              "area": "2400 sq.ft",
+              "customerInfo": "Vikram Reddy | +91 9362811786 | customer87@email.com"
+            },
+            {
+              "flatNumber": 203,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "BLOCKED",
+              "facing": "East",
+              "floor": 48,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 303,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "South",
+              "floor": 49,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 403,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 50,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 503,
+              "tower": "Tower A",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 17,
+              "area": "2400 sq.ft",
+              "customerInfo": "Vikram Reddy | +91 9302444602 | customer4@email.com"
+            }
+          ]
+        }
       ]
+
     },
     {
-      "type": "3 BHK",
-      "area": "1500 sq.ft",
-      "flats": [
-        { "flatNo": "A-201" },
-        { "flatNo": "A-202" },
-        { "flatNo": "A-203" }
+      "name": "Tower B",
+      "columns": [
+        {
+          "type": "2 BHK",
+          "area": "1200 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 101,
+              "tower": "Tower B",
+              "type": "4 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 1,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 201,
+              "tower": "Tower B",
+              "type": "4 BHK",
+              "status": "AVAILABLE",
+              "facing": "West",
+              "floor": 2,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 301,
+              "tower": "Tower B",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "South-West",
+              "floor": 3,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9610706547, customer47@email.com"
+            },
+            {
+              "flatNumber": 401,
+              "tower": "Tower B",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 4,
+              "area": "2800 sq.ft",
+              "customerInfo": "Vikram Reddy, +91 9017819984, customer31@email.com"
+            },
+            {
+              "flatNumber": 501,
+              "tower": "Tower B",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 5,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9418729638, customer77@email.com"
+            }
+          ]
+        },
+        {
+          "type": "3 BHK",
+          "area": "1500 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 102,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 14,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 202,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "BLOCKED",
+              "facing": "West",
+              "floor": 15,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 302,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "East",
+              "floor": 16,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9959824864, customer39@email.com"
+            },
+            {
+              "flatNumber": 402,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North",
+              "floor": 17,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 502,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "South-East",
+              "floor": 21,
+              "area": "2800 sq.ft",
+              "customerInfo": "Rajesh Kumar, +91 9553653510, customer97@email.com"
+            }
+          ]
+        },
+        {
+          "type": "4 BHK",
+          "area": "2000 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 103,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "East",
+              "floor": 47,
+              "area": "2400 sq.ft",
+              "customerInfo": "Vikram Reddy | +91 9362811786 | customer87@email.com"
+            },
+            {
+              "flatNumber": 203,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "BLOCKED",
+              "facing": "East",
+              "floor": 48,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 303,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "South",
+              "floor": 49,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 403,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 50,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 503,
+              "tower": "Tower B",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 17,
+              "area": "2400 sq.ft",
+              "customerInfo": "Vikram Reddy | +91 9302444602 | customer4@email.com"
+            }
+          ]
+        }
       ]
+
     },
+    
     {
-      "type": "4 BHK",
-      "area": "2000 sq.ft",
-      "flats": [
-        { "flatNo": "A-301" },
-        { "flatNo": "A-302" }
+      "name": "Tower C",
+      "columns": [
+        {
+          "type": "2 BHK",
+          "area": "1200 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 101,
+              "tower": "Tower C",
+              "type": "4 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 1,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 201,
+              "tower": "Tower C",
+              "type": "4 BHK",
+              "status": "AVAILABLE",
+              "facing": "West",
+              "floor": 2,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 301,
+              "tower": "Tower C",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "South-West",
+              "floor": 3,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9610706547, customer47@email.com"
+            },
+            {
+              "flatNumber": 401,
+              "tower": "Tower C",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 4,
+              "area": "2800 sq.ft",
+              "customerInfo": "Vikram Reddy, +91 9017819984, customer31@email.com"
+            },
+            {
+              "flatNumber": 501,
+              "tower": "Tower C",
+              "type": "4 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 5,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9418729638, customer77@email.com"
+            }
+          ]
+        },
+        {
+          "type": "3 BHK",
+          "area": "1500 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 102,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 14,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 202,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "BLOCKED",
+              "facing": "West",
+              "floor": 15,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 302,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "East",
+              "floor": 16,
+              "area": "2800 sq.ft",
+              "customerInfo": "Deepika Singh, +91 9959824864, customer39@email.com"
+            },
+            {
+              "flatNumber": 402,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North",
+              "floor": 17,
+              "area": "2800 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 502,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "South-East",
+              "floor": 21,
+              "area": "2800 sq.ft",
+              "customerInfo": "Rajesh Kumar, +91 9553653510, customer97@email.com"
+            }
+          ]
+        },
+        {
+          "type": "4 BHK",
+          "area": "2000 sq.ft",
+          "flats": [
+            {
+              "flatNumber": 103,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "East",
+              "floor": 47,
+              "area": "2400 sq.ft",
+              "customerInfo": "Vikram Reddy | +91 9362811786 | customer87@email.com"
+            },
+            {
+              "flatNumber": 203,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "BLOCKED",
+              "facing": "East",
+              "floor": 48,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 303,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "South",
+              "floor": 49,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 403,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "AVAILABLE",
+              "facing": "North-East",
+              "floor": 50,
+              "area": "2400 sq.ft",
+              "customerInfo": "-"
+            },
+            {
+              "flatNumber": 503,
+              "tower": "Tower C",
+              "type": "3 BHK",
+              "status": "SOLD",
+              "facing": "West",
+              "floor": 17,
+              "area": "2400 sq.ft",
+              "customerInfo": "Vikram Reddy | +91 9302444602 | customer4@email.com"
+            }
+          ]
+        }
       ]
+
     }
   ]
+  
 }

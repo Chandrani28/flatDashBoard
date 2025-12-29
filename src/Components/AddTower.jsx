@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function AddTower() {
+export default function AddTower(props) {
   const [column, setColumn] = useState([]);
   const [Cancel, setCancel] = useState(false);
 
@@ -114,7 +114,7 @@ export default function AddTower() {
           <button
             type="button"
             class="btn btn-secondary btn-lg "
-            onClick={() => handleCancel(true)}
+            onClick={() => props.setIsVisible(false)}
             style={{
               marginRight: "20px",
               paddingLeft: "120px",

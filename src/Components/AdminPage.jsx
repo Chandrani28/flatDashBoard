@@ -1,16 +1,37 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import data from "./towersdata.json";
 import Table from "./Table";
+import data from "./towersdata.json";
+import AddTower from "./AddTower";
 
 export default function AdminPage() {
   const [adminmode, setAdminMode] = useState(true);
 
-  
+  const [isVisible, setIsVisible] = useState(false);
 
+  const TowerData = data.towerData;
+
+  const headings = [
+    TowerData.map((eachData, i) =>
+      eachData.columns.map((elt, i) => {
+        return elt.type;
+      })
+    ),
+  ];
+  console.log(headings);
+
+  const datas = [
+    TowerData.map((eachData, i) =>
+      eachData.columns.map((elt, i) =>
+        elt.flats.map((eachelt, i) => {
+          return eachelt.flatNo;
+        })
+      )
+    ),
+  ];
+  console.log(datas);
   return (
     <div>
-      
       <nav className="navbar bg-body-tertiary ">
         <div className="container-fluid d-flex justify-content-between align-items-center">
           {/*icon+title */}
@@ -73,7 +94,11 @@ export default function AdminPage() {
                 >
                   View Mode
                 </button>
-                <button type="button" class="btn btn-primary" onClick={() =>}>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onClick={() => setIsVisible(true)}
+                >
                   + Add Tower
                 </button>
               </div>
@@ -110,7 +135,162 @@ export default function AdminPage() {
           </div>
         </div>
       </nav>
-      <div className="card-group">
+      {/* Add Tower Component render when "+ Add Tower Button is clicked" */}
+      {isVisible && <AddTower setIsVisible={setIsVisible} />}
+      <div className="row row-cols-4 justify-content-around ">
+        {TowerData.map((eachName, i) => (
+          <div className="col" style={{ border: "solid" }}>
+            <h3 className=" d-flex justify-content-around">{eachName.name}</h3>
+
+            <div class="row">
+              {eachName.columns.map((eachValue, i) => (
+                <div class="col mb-2">
+                  <div className="badge text-bg-secondary text-wrap mb-2">
+                    <h6>{eachValue.type}</h6>
+                    <p>{eachValue.area}</p>
+                  </div>
+
+                  <div>
+                    {eachValue.flats.map((eachFlat, i) => (
+                      <div>
+                        <button>{eachFlat.flatNumber}</button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+{
+  /* 
+  
+  <Table name="Tower A" theadData={headings} tbodyData={datas} />
+  <table className="table table-hover mb-0">
+    
+    <tbody>
+          <tr>
+            {datas.map((key, index) => {
+              return (
+                <td>
+                  <button>{key}</button>
+                </td>
+              );
+            })}
+          </tr>
+       
+    </tbody>
+  </table>
+
+  
+  */
+}
+
+{
+  /*{data.towerNames.map((eachName, i) => (
+  <div class="container">
+    <h3 className=" d-flex justify-content-center">{eachName.name}</h3>
+    {data.columns.map((eachValue, i) => (
+      <div className="d-flex row justify-content-around align-items-center">
+        <div>
+          <h4 class="row">
+            {eachValue.type} {eachValue.area}
+          </h4>
+          <div class="col">
+            {eachValue.flats.map((eachFlat, i) => (
+              <div>
+                <button>{eachFlat.flatNo}</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+))}
+{/*<div class="container">
+  <h3 className=" d-flex justify-content-center">Tower A</h3>
+  <div class="d-flex justify-content-around align-items-center">
+    <div>
+      <h3>4BHK</h3>
+      <div class="grid text-center">
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>3BHK</h3>
+      <div class="grid text-center">
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>2BHK</h3>
+      <div class="grid text-center">
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>1BHK</h3>
+      <div class="grid text-center">
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+        <div>
+          <button>1</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>*/
+}
+
+{
+  /*
+  <div className="card-group">
         <div className="card">
           <div className="card-body ">
             <h5 className="card-title text-center">{data.name}</h5>
@@ -134,7 +314,5 @@ export default function AdminPage() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
+      </div> */
 }
